@@ -1,0 +1,18 @@
+\begin{enumerate}
+
+\item Выбрано сообщение $T$ = "\VAR{gost2001.demo.message}";
+\item Представление сообщения в кодировке cp1251:
+%% for byte in gost2001.sign.message.encode("cp1251")
+\VAR{"%x" % byte}
+%% endfor
+;
+\item SHA-512-хеш сообщения $h$: \\ \VAR{("%x" % gost2001.sign.h)[:80]} \\
+\VAR{("%x" % gost2001.sign.h)[80:]}
+\item Вычислено $e$ = \VAR{"%x" % gost2001.sign.e};
+\item Выбрано $k$ = \VAR{"%x" % gost2001.sign.k};
+\item Вычислено $C$ = (\VAR{"%x" % gost2001.sign.x_c}, \VAR{"%x" % gost2001.sign.y_c});
+\item Вычислено $r$ = \VAR{"%x" % gost2001.sign.r};
+\item Вычислено $s$ = \VAR{"%x" % gost2001.sign.s};
+\item Получена подпись $\left\{\VAR{"%x" % gost2001.sign.r},  \VAR{"%x" % gost2001.sign.s} \right\}$;
+
+\end{enumerate}

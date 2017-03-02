@@ -1,0 +1,9 @@
+\begin{enumerate}
+
+\item Передано сообщение $T$ = "\VAR{rsa.verify.message}" и подпись $s$ = \VAR{"%x" % rsa.verify.signature};
+\item Вычислен хеш $h(T)$ = \VAR{"%x" % rsa.verify.h1};
+\item Вычислено $\bar{h}$ = \VAR{"%x" % rsa.verify.h2};
+\item Виктор \BLOCK{if not rsa.verify.passed} не \BLOCK{endif} принимает доказательство
+\VAR{"%x" % rsa.verify.h1} mod \VAR{"%x" % rsa.gen.n} = \VAR{"%x" % rsa.verify.h2}.
+
+\end{enumerate}

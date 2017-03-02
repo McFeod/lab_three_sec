@@ -1,0 +1,17 @@
+\begin{enumerate}
+
+\item Передано сообщение $T$ = "\VAR{gost2001.verify.message}" и подпись $\left\{\bar{r}, s \right\}$, где
+ $\bar{r}$ = \VAR{"%x" % gost2001.verify.r}, $s$ = \VAR{"%x" % gost2001.verify.s};
+\item Вычислен хеш $h(T)$ =  \\ \VAR{("%x" % gost2001.verify.h)[:80]} \\
+\VAR{("%x" % gost2001.verify.h)[80:]};
+\item Вычислено $e$ = \VAR{"%x" % gost2001.verify.e};
+\item Вычислено $e^{-1}$ = \VAR{"%x" % gost2001.verify.e_1};
+\item Вычислено $v$ = \VAR{"%x" % gost2001.verify.v};
+\item Вычислено $z_1$ = \VAR{"%x" % gost2001.verify.z1};
+\item Вычислено $z_2$ = \VAR{"%x" % gost2001.verify.z2};
+\item Вычислено $\bar{C}$ = (\VAR{"%x" % gost2001.verify.x_c}, \VAR{"%x" % gost2001.verify.y_c});
+\item Вычислено $\bar{r}$ = \VAR{"%x" % gost2001.verify.r_};
+\item Виктор \BLOCK{if not gost2001.verify.passed} не \BLOCK{endif} принимает доказательство
+$r = \bar{r}$.
+
+\end{enumerate}

@@ -1,0 +1,13 @@
+\begin{enumerate}
+
+\item Передано сообщение $T$ = "\VAR{gost94.verify.message}" и подпись $\left\{\bar{w}, s \right\}$, где
+ $\bar{w}$ = \VAR{"%x" % gost94.verify.w}, $s$ = \VAR{"%x" % gost94.verify.s};
+\item Вычислен хеш $h(T)$ = \VAR{"%x" % gost94.verify.h};
+\item Вычислено $v$ = \VAR{"%x" % gost94.verify.v};
+\item Вычислено $z_1$ = \VAR{"%x" % gost94.verify.z1};
+\item Вычислено $z_2$ = \VAR{"%x" % gost94.verify.z2};
+\item Вычислено $u$ = \VAR{"%x" % gost94.verify.u};
+\item Виктор \BLOCK{if not gost94.verify.passed} не \BLOCK{endif} принимает доказательство
+$u = \bar{w}$.
+
+\end{enumerate}

@@ -1,0 +1,12 @@
+\begin{enumerate}
+
+\item Выбрано сообщение $T$ = "\VAR{rsa.demo.message}";
+\item Представление сообщения в кодировке cp1251:
+%% for byte in rsa.sign.message.encode("cp1251")
+\VAR{"%x" % byte}
+%% endfor
+;
+\item MD5-хеш сообщения $h$: \VAR{"%x" % rsa.sign.h}
+\item Вычислена подпись $s$ = \VAR{"%x" % rsa.sign.s};
+
+\end{enumerate}

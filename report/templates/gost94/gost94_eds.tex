@@ -1,0 +1,15 @@
+\begin{enumerate}
+
+\item Выбрано сообщение $T$ = "\VAR{gost94.demo.message}";
+\item Представление сообщения в кодировке cp1251:
+%% for byte in gost94.sign.message.encode("cp1251")
+\VAR{"%x" % byte}
+%% endfor
+;
+\item SHA-256-хеш сообщения $h$: \VAR{"%x" % gost94.sign.h}
+\item Выбрано $k$ = \VAR{"%x" % gost94.sign.h};
+\item Вычислено $w$ = \VAR{"%x" % gost94.sign.w} и $\bar{w}$ = \VAR{"%x" % gost94.sign.w_};
+\item Вычислено $s$ = \VAR{"%x" % gost94.sign.s};
+\item Получена подпись $\left\{\VAR{"%x" % gost94.sign.w_},  \VAR{"%x" % gost94.sign.s} \right\}$;
+
+\end{enumerate}
